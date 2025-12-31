@@ -1,150 +1,192 @@
 DCP Framework
 
 A Constraint-Based Framework for Structured Judgment and Layered Interpretation
-（判定約束框架：一種結構化判定與分層詮釋的方法）
+判定約束框架：一種用於結構化判定與分層詮釋的方法
 
 ⸻
 
-簡介（Introduction）
+Overview / 概述
 
-本專案提出一套稱為 DCP（Decision / Determination under Constraint Principles） 的概念性框架，用於描述在不完整資訊、多條件約束與不確定環境下，如何進行可追溯、可比較、可解釋的判定行為。
+EN
+The DCP Framework is a conceptual framework for reasoning under constraints.
+It provides a structured way to describe how judgments, comparisons, and interpretations can be made when information is incomplete, heterogeneous, or condition-dependent.
 
-DCP 並非演算法、模型或軟體實作，而是一種結構化思維與判定設計方法，用於協助人或系統：
-	•	描述「判定成立」所需的最小條件集合
-	•	表達不確定性與條件不足的狀態
-	•	區分事實、假設、參考與推論
-	•	在不同領域中建立可映射、可重組的判定結構
+Rather than producing “answers”, DCP focuses on making conditions, assumptions, references, and uncertainty explicit, so that reasoning remains traceable and revisable.
 
-本框架可被應用於工程、設計、分析、決策、評估、審核與其他需要「條件式判定」的情境中。
-
-⸻
-
-本專案的定位（Scope & Non-Claims）
-
-本專案：
-	•	✅ 是一套概念性、結構性框架
-	•	✅ 提供語義層、判定層與投影層的組織方式
-	•	✅ 可作為後續實作、工具、模型或流程的理論基底
-	•	✅ 可被不同領域重新詮釋與映射
-	•	❌ 不是演算法實作
-	•	❌ 不構成工程、法律、財務或任何專業建議
-	•	❌ 不保證可直接產生決策結果
-	•	❌ 不宣稱唯一性或排他性
-
-所有內容僅描述「在給定條件下如何進行判定」，而非「應該如何行動」。
+ZH
+DCP（判定約束框架）是一套用於「在條件限制下進行判定」的概念性框架。
+它的目的不是給出唯一正確答案，而是讓判定所依賴的條件、假設、參考來源與不確定性可以被清楚描述、檢視與重組。
 
 ⸻
 
-文件結構總覽（Layered Structure）
+What This Is / 這是什麼
 
-本專案以分層方式組織，避免混淆概念層級與應用層級。
+EN
+	•	A meta-framework for structured judgment
+	•	A way to describe reasoning under constraints
+	•	A scaffold for layered interpretation
+	•	A reusable pattern for comparing, auditing, or analyzing information
+	•	A conceptual foundation that can be applied across domains
 
-Part 0 — 作者導言（Author’s Introduction）
-
-定位與說明本框架的動機、範圍與閱讀方式，用於說明「這不是什麼」以及「應如何理解它」。
-
-此部分不構成理論本體，僅作為閱讀導引。
-
-⸻
-
-Part I — Layer 0
-
-DCP：判定穩態模型（Core Constraint Model）
-
-此層為整個架構的核心。
-
-內容聚焦於：
-	•	什麼是「判定」
-	•	什麼是「條件」
-	•	何謂可成立 / 不成立 / 未定
-	•	判定如何受到條件集合約束
-	•	不確定性如何被保留而非強行消除
-	•	判定如何保持穩態而非結論導向
-
-此層不涉及任何具體領域，不包含應用範例，也不涉及實作方式。
-
-可視為一組「語義與邏輯的最小公約數」。
+ZH
+	•	一種結構化判定的元框架
+	•	一種描述「受條件約束下推理」的方法
+	•	一套分層詮釋與比對的結構
+	•	可重複使用的分析與判定模式
+	•	可套用於不同領域的概念基底
 
 ⸻
 
-Part II — Layer 1
+What This Is Not / 這不是什麼
 
-翾靈系統（Xuanling System）：操作性詮釋層
+EN
+	•	Not an algorithm
+	•	Not a software product
+	•	Not an optimization engine
+	•	Not an oracle or decision authority
+	•	Not a fixed ontology
 
-本層將 Layer 0 的抽象判定原則，轉寫為可被人或系統操作的結構描述。
-
-重點在於：
-	•	如何將判定轉換為「條件組合」
-	•	如何表述不確定性、限制與依賴關係
-	•	如何將不同來源的資訊納入同一判定空間
-	•	如何避免過早結論或假定單一真值
-	•	如何讓不同實作者在相同結構下產生可比較輸出
-
-此層仍然不等同於實作，而是一種操作語法（operational grammar）或詮釋接口。
-
-⸻
-
-Part III — Layer 2（附錄 / 投影層）
-
-應用示例與領域映射（Illustrative Projections）
-
-此層為非規範性內容，用於展示 DCP 結構如何被投影到不同領域中。
-
-例如：
-	•	工程估算與審核
-	•	規範比對與一致性檢查
-	•	文件差異分析
-	•	風險與不確定性標示
-	•	多來源資料對齊
-	•	判定依據追溯
-
-此層中的內容：
-	•	不構成唯一實作方式
-	•	不具約束力
-	•	可被替換、擴充或改寫
-	•	僅作為示意與參考
-
-其目的在於展示「結構如何被使用」，而非定義「應該怎麼用」。
+ZH
+	•	不是演算法
+	•	不是產品或工具
+	•	不是自動決策系統
+	•	不是權威或真理來源
+	•	不是封閉定義的本體論
 
 ⸻
 
-關於語言與翻譯（On Language）
+Core Idea / 核心概念
 
-本專案以中文作為原始語言，原因在於其語義彈性與層次表達能力更適合承載條件、關係與不確定性。
+At the center of DCP is the idea that:
 
-其他語言版本（如英文）應視為 投影版本（projection），而非權威文本。
-翻譯可能引入語義偏移，此屬正常現象，亦符合本框架對「條件差異」的基本假設。
+Judgment emerges from constraints, not from absolute rules.
 
-⸻
+判定不是來自單一規則，而是來自一組條件之間的關係。
 
-使用與引用原則
-
-你可以：
-	•	閱讀、引用、討論本框架
-	•	以其概念設計工具、流程或系統
-	•	延伸為特定領域的應用模型
-	•	建立你自己的層級或投影
-
-但請理解：
-	•	本框架描述的是「判定結構」，不是結論
-	•	任何輸出皆依賴於輸入條件
-	•	不存在脫離條件的「正確答案」
-
-⸻
-
-狀態說明（Status）
-
-本專案目前為 概念穩定版（conceptually stable）：
-	•	核心結構已封裝
-	•	層級關係已明確
-	•	可作為後續研究與實作基礎
-	•	未綁定特定平台、語言或模型
-
-後續版本可能僅在表達與示例層面擴充，不影響核心結構。
+Core elements
+	•	Constraint（條件）
+Explicit assumptions, limits, or boundaries.
+	•	Reference Set（參考集合）
+Data, examples, standards, or prior cases used for comparison.
+	•	Judgment Result（判定結果）
+Outcomes expressed as:
+	•	✅成立
+	•	❌不成立
+	•	⧖未定（條件不足／衝突）
+	•	Uncertainty（不確定性）
+What is missing, ambiguous, or sensitive to change.
+	•	Minimal Irreducible Conditions（最小不可消元條件）
+The smallest set of conditions that actually drive the result.
 
 ⸻
 
-聯絡與延伸
+Layered Structure / 分層結構
 
-作者保留對本框架結構與語義的詮釋權。
-若你希望基於此架構進行研究、實作或延伸設計，可在遵守原始語義的前提下進行再創作。
+The framework is organized into conceptual layers rather than rigid modules.
+
+Layer 0 — DCP Core
+
+The abstract judgment logic:
+	•	conditions
+	•	references
+	•	constraints
+	•	uncertainty
+	•	decision states
+
+This layer defines how reasoning is structured.
+
+⸻
+
+Layer 1 — Xuanling System
+
+An interpretive layer that organizes DCP into reusable patterns, templates, and reasoning flows.
+
+This layer introduces:
+	•	structured prompts
+	•	judgment schemas
+	•	reusable condition blocks
+	•	interpretation logic
+
+It translates abstract judgment into operational forms.
+
+⸻
+
+Layer 2 — Application & Projection
+
+Domain-specific applications built on top of the framework.
+
+Examples include:
+	•	engineering estimation
+	•	specification review
+	•	compliance comparison
+	•	data consistency checking
+	•	cross-source verification
+	•	scenario evaluation
+
+Each application is a projection, not a specialization that locks the system.
+
+⸻
+
+How to Read This Repository / 如何閱讀本倉庫
+	•	Start with Part 0 / Core to understand the philosophy and logic
+	•	Continue with Layer 1 to see how interpretation structures are built
+	•	Explore Layer 2 for applied examples
+	•	Treat each document as independent but composable
+
+⸻
+
+Design Philosophy / 設計哲學
+
+EN
+	•	Open-ended rather than closed
+	•	Constraint-driven rather than rule-driven
+	•	Interpretable rather than opaque
+	•	Modular rather than monolithic
+	•	Evolvable rather than finalized
+
+ZH
+	•	開放而非封閉
+	•	以條件為中心，而非規則至上
+	•	可解釋，而非黑盒
+	•	模組化，而非單體
+	•	可演化，而非定稿
+
+⸻
+
+Intended Use / 使用方式
+
+This framework may be used as:
+	•	a thinking scaffold
+	•	a prompt-design reference
+	•	a reasoning template
+	•	a comparison framework
+	•	a documentation logic
+	•	a foundation for AI-assisted workflows
+
+It does not prescribe decisions; it structures how decisions are examined.
+
+⸻
+
+Status
+
+This repository represents an evolving conceptual framework.
+
+It is intentionally incomplete, open to reinterpretation, and designed to support multiple future instantiations.
+
+⸻
+
+Attribution & Reuse
+
+You are welcome to reference, adapt, or extend this framework.
+
+Please preserve:
+	•	attribution
+	•	the interpretive nature of the framework
+	•	the distinction between conditions and conclusions
+
+⸻
+
+Closing Note
+
+DCP is not a claim about truth.
+It is a method for making 
